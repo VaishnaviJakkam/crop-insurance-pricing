@@ -74,6 +74,13 @@ const ResultCard = ({ crop, area, result }: ResultCardProps) => {
           {result.farmerDecision}
         </p>
       </div>
+
+      {/* Disclaimer */}
+      <div className="mt-5 rounded-lg bg-muted/40 border border-border px-4 py-3">
+        <p className="text-[11px] font-body text-muted-foreground leading-relaxed">
+          <span className="font-semibold text-foreground">Disclaimer:</span> The premium amount shown is indicative and subject to market risks, weather conditions, and regulatory changes. Actual premium may vary based on government subsidy, crop yield history, and insurer terms. This calculator is for informational purposes only and does not constitute a binding insurance quote. Please refer to the official PMFBY guidelines and consult your nearest agricultural insurance provider before making any decisions. <span className="italic">Terms & Conditions apply.</span>
+        </p>
+      </div>
     </div>
   );
 };
