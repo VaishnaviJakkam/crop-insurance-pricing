@@ -74,6 +74,11 @@ const ResultCard = ({ crop, area, result }: ResultCardProps) => {
           {result.farmerDecision}
         </p>
       </div>
+
+      {/* Disclaimer */}
+      <p className="text-[10px] text-muted-foreground/70 text-center mt-5 font-body italic">
+        *Premium estimates are indicative & subject to market risks. Actual values may vary based on climate conditions & insurer terms.
+      </p>
     </div>
   );
 };
