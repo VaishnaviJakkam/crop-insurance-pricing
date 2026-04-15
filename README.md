@@ -50,7 +50,8 @@ Ensure the following packages and tools are installed:
 ## How to Run
 
 This repository contains:
-Backend (Flask):app.py, model.pkl,utils.py
+Backend: python -m uvicorn main:app --reload --app-dir .
+Frontend: npm run dev
 
 Usage (in VS Code or terminal)
 ---
