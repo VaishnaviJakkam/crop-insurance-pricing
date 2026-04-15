@@ -53,6 +53,8 @@ This repository contains:
 Backend (Flask):app.py, model.pkl,utils.py
 
 Usage (in VS Code or terminal)
+---
+
 1.Clone the repository
    ```bash
       git clone https://github.com/VaishnaviJakkam/crop-insurance-premium.git
