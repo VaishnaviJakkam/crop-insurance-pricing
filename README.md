@@ -50,8 +50,8 @@ Ensure the following packages and tools are installed:
 ## How to Run
 
 This repository contains:
-Backend: python -m uvicorn main:app --reload --app-dir .
-Frontend: npm run dev
+- Backend: python -m uvicorn main:app --reload --app-dir
+- Frontend: npm run dev
 
 Usage (in VS Code or terminal)
 ---
@@ -97,35 +97,99 @@ You may test using:
   
 ## Project Structure
 ```text
-crop-insurance-premium/
+
+crop-insurance-pricing/
+│
 ├── backend/
-│   ├── app.py
-│   ├── model.pkl
-│   ├── utils.py
-│   └── __pycache__/
-├── crop_table/
-│   └── crop_sensitivity.csv
-├── data/
-│   ├── climate_data.csv
-│   └── processed_data.csv
-├── models/
-│   ├── risk_model.pkl
-│   └── scaler.pkl
-├── notebooks/
-│   ├── Climate_Risk_Model.ipynb
-│   └── Premium_Calculation.ipynb
-├── src/
-│   ├── main.py
-│   └── helpers.py
+│   ├── __pycache__/
+│   │   └── main.cpython-312.pyc
+│   │
+│   ├── crop_table/
+│   │   └── crop_sensitivity.csv
+│   │
+│   ├── data/
+│   │   ├── processed/
+│   │   │   └── climate_with_risk.csv
+│   │   │
+│   │   └── raw/
+│   │       └── india_weather_2000_2024.csv
+│   │
+│   ├── models/
+│   │   ├── decision_tree.pkl
+│   │   ├── logistic_model.pkl
+│   │   ├── random_forest.pkl
+│   │
+│   ├── notebooks/
+│   │   └── exploration.ipynb
+│   │
+│   ├── src/
+│   │   └── main.py
+|   |   └── requirements.txt
+│   
+│   
+│
+│
 ├── frontend/
 │   ├── public/
 │   │   ├── placeholder.svg
-│   │   └── robots.txt
-│   └── src/
-│       └── App.tsx
-├── requirements.txt
-├── .gitignore
-└── README.md
+│   │   ├── robots.txt
+│   │
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── crops-header.png
+│   │   │   └── image.png
+│   │   │
+│   │   ├── components/
+│   │   │   ├── ui/
+│   │   │   ├── CropCalculator.tsx
+│   │   │   ├── Loader.tsx
+│   │   │   ├── NavLink.tsx
+│   │   │   └── ResultCard.tsx
+│   │   │
+│   │   ├── data/
+│   │   │   └── cropData.ts
+│   │   │
+│   │   ├── hooks/
+│   │   │   ├── use-mobile.tsx
+│   │   │   └── use-toast.ts
+│   │   │
+│   │   ├── lib/
+│   │   │   └── utils.ts
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Index.tsx
+│   │   │   └── NotFound.tsx
+│   │   │
+│   │   ├── test/
+│   │   │   ├── example.test.ts
+│   │   │   └── setup.ts
+│   │   │
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   └── vite-env.d.ts
+│   │
+│   ├── .gitignore
+│   ├── README.md
+│   ├── bun.lockb
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.ts
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   ├── vite.config.ts
+│   ├── vitest.config.ts
+│
+│
+├── LICENSE
+├── README.md
+check this and lmk
 ```
 ## Usage Guide
 ## Climate Risk Prediction
